@@ -1,6 +1,6 @@
-{% set python_min = '3.10.0' %}
+{% set python_min = "3.10.0" %}
 {% set name = "revel" %}
-{% set version = "0.9.1" %}
+{% set version = "0.9.2.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/revel-{{ version }}.tar.gz
-  sha256: 1cfab62ef064627fc8579d85d1c552f269327290d8d2c55dd2b4b60b84afa380
+  sha256: 2ad9763aadb71abac80153ea8c7463f425b69f3b9517171825d6e37a4368ca48
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
